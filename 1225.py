@@ -1,3 +1,5 @@
+# 이상한 곱셈
+
 a, b = input().split()
 
 total = 0
