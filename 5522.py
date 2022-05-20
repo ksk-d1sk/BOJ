@@ -1,4 +1,3 @@
-# 5522
 # 카드 게임
 
 score_list = list()

@@ -1,4 +1,3 @@
-# 3003
 # 킹, 퀸, 룩, 비숍, 나이트, 폰
 
 my_piece = list(map(int, input().split()))

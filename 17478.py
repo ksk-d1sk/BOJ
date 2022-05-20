@@ -1,4 +1,3 @@
-# 17478
 # 재귀함수가 뭔가요?
 
 def professorJHs_CHAT_BOT(N):

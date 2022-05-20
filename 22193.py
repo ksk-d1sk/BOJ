@@ -1,4 +1,3 @@
-# 22193
 # Multiply
 
 n, m = input().split()

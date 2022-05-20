@@ -1,4 +1,3 @@
-# 5554
 # 심부름 가는 길
 
 travel_time = list()

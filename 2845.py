@@ -1,4 +1,3 @@
-#2845
 # 파티가 끝나고 난 뒤
 
 l, p = map(int, input().split())

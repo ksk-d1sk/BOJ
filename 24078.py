@@ -1,4 +1,3 @@
-# 24078
 # 余り (Remainder)
 
 x = int(input())

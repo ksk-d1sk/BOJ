@@ -1,4 +1,3 @@
-// 24900
 // 한별찍기
 
 console.log(`                                                           :8DDDDDDDDDDDDDD$.                                           `);
