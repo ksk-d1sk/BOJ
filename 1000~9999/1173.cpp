@@ -1,3 +1,5 @@
+// 운동
+
 #include <stdio.h>
 
 int main(void)
