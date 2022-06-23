@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
 	int exerciseTime, minPulse, maxPulse, exercise, rest;
 	scanf("%d %d %d %d %d", &exerciseTime, &minPulse, &maxPulse, &exercise, &rest);
