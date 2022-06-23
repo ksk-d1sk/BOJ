@@ -1,3 +1,5 @@
+// 개수 세기
+
 #include <iostream>
 
 int main(void)
