@@ -1,3 +1,5 @@
+// 알파벳 개수
+
 #include <iostream>
 
 int arr[26];
