@@ -1,4 +1,4 @@
-// ť
+// 큐
 
 #include <iostream>
 
