@@ -16,13 +16,13 @@ int tail = 0;
 int head = 0;
 
 int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	int n;
 	cin >> n;
 
 	while (n--) {
-		ios::sync_with_stdio(0);
-		cin.tie(0);
-
 		string cmd;
 		cin >> cmd;
 
@@ -51,10 +51,8 @@ void push(int x) {
 }
 
 int pop() {
-	if (empty())
-		return -1;
-	else
-		return dat[head++];
+	if (empty()) return -1;
+	else return dat[head++];
 }
 
 int size() {
@@ -62,22 +60,16 @@ int size() {
 }
 
 bool empty() {
-	if (size())
-        return 0;
-	else
-        return 1;
+	if (size()) return 0;
+	else return 1;
 }
 
 int front() {
-	if (empty())
-		return -1;
-	else
-		return dat[head];
+	if (empty()) return -1;
+	else return dat[head];
 }
 
 int back() {
-	if (empty())
-		return -1;
-	else
-		return dat[tail-1];
+	if (empty()) return -1;
+	else return dat[tail-1];
 }
