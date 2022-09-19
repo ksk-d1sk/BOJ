@@ -16,7 +16,7 @@ public class Main {
 
 		sc.close();
 
-		mergeSort(member);
+		Sort.mergeSort(member);
 		showArray(member);
 	}
 	
@@ -25,8 +25,10 @@ public class Main {
 			System.out.println(data.getAge() + " " + data.getName());
 		}
 	}
+}
 
-	private static void mergeSort(Member[] member) {
+class Sort {
+	public static void mergeSort(Member[] member) {
 		Member[] temp = new Member[member.length];
 		mergeSort(member, temp, 0, member.length - 1);
 	}
