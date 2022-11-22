@@ -1,3 +1,5 @@
+// HI-ARC
+
 use std::io;
 
 fn main() {
