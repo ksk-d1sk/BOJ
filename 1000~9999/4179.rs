@@ -1,28 +1,20 @@
 // 불!
 
+use std::io::{self, Read};
 use std::collections::VecDeque;
 use self::Object::*;
 
-macro_rules! input_line {
-    () => ({
-        let mut line = String::new();
-        std::io::stdin().read_line(&mut line).unwrap();
-        line.trim().chars().collect()
-    });
-    ($($t: ty), +) => ({
-        let mut line = String::new();
-        std::io::stdin().read_line(&mut line).unwrap();
-        let mut iter = line.split_ascii_whitespace();
-        ($(iter.next().unwrap().parse::<$t>().unwrap()), +)
-    });
-}
-
 fn main() {
-    let (r, c) = input_line!(usize, usize);
+    let mut input = String::new();
+    io::stdin().read_to_string(&mut input).unwrap();
+    let mut input = input.split_ascii_whitespace();
+
+    let r: usize = input.next().unwrap().parse().unwrap();
+    let c: usize = input.next().unwrap().parse().unwrap();
     let mut maze = Vec::new();
 
     for _ in 0..r {
-        let v: Vec<char> = input_line!();
+        let v = input.next().unwrap().chars().collect();
         maze.push(v);
     }
 
