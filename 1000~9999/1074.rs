@@ -16,8 +16,8 @@ fn main() {
 }
 
 fn solution(width: usize, r: usize, c: usize) -> usize {
+    let mid = width / 2;
     let q = {
-        let mid = width / 2;
         if mid < r && mid < c { 4 }
         else if mid < r       { 3 }
         else if mid < c       { 1 }
@@ -26,20 +26,14 @@ fn solution(width: usize, r: usize, c: usize) -> usize {
 
     // println!("{}사분면", q);
 
-    if width == 2 {
-        match q {
-            2 => 0,
-            1 => 1,
-            3 => 2,
-            4 => 3,
-            _ => panic!(),
-        }
+    if width == 1 {
+        0
     } else {
         match q {
-            2 => solution(width / 2, r, c),
-            1 => solution(width / 2, r, c - width / 2) + fpow(width / 2, 2),
-            3 => solution(width / 2, r - width / 2, c) + fpow(width / 2, 2) * 2,
-            4 => solution(width / 2, r - width / 2, c - width / 2) + fpow(width / 2, 2) * 3,
+            2 => solution(mid, r, c),
+            1 => solution(mid, r, c - mid) + fpow(mid, 2),
+            3 => solution(mid, r - mid, c) + fpow(mid, 2) * 2,
+            4 => solution(mid, r - mid, c - mid) + fpow(mid, 2) * 3,
             _ => panic!(),
         }
     }
