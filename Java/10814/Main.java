@@ -1,29 +1,33 @@
 // 나이순 정렬
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
 		Member[] member = new Member[n];
 
 		for (int i = 0; i < n; i++) {
-			int age = sc.nextInt();
-			String name = sc.next();
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int age = Integer.parseInt(st.nextToken());
+			String name = st.nextToken();
 			member[i] = new Member(age, name);
 		}
-
-		sc.close();
 
 		Sort.mergeSort(member);
 		showArray(member);
 	}
 	
 	private static void showArray(Member[] member) {
+		StringBuffer sb = new StringBuffer();
 		for (Member data : member) {
-			System.out.println(data.getAge() + " " + data.getName());
+			sb.append(data.getAge()).append(' ').append(data.getName()).append('\n');
 		}
+		System.out.println(sb.toString());
 	}
 }
 
