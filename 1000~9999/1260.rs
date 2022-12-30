@@ -25,7 +25,7 @@ impl Search {
         let mut visit = vec![true; link.len()];
         let mut stack = Vec::new();
 
-        stack.push(v - 1);
+        stack.push(v);
 
         while let Some(p) = stack.pop() {
             if visit[p] {
@@ -48,8 +48,8 @@ impl Search {
         let mut visit = vec![true; link.len()];
         let mut queue = VecDeque::new();
 
-        queue.push_back(v - 1);
-        visit[v - 1] = false;
+        queue.push_back(v);
+        visit[v] = false;
 
         while let Some(p) = queue.pop_front() {
             answer.push(p + 1);
@@ -95,7 +95,7 @@ fn main() {
 
     println!(
         "{}\n{}",
-        search.dfs(v),
-        search.bfs(v)
+        search.dfs(v - 1),
+        search.bfs(v - 1)
     );
 }
